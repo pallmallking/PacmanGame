@@ -84,8 +84,8 @@ class Ghost extends Entity {
     this.aiType = aiType;
   }
 
-  move(AI)(maze, targetX, targetY);
-  {if (this.aiType === 'random') {
+  moveAI(maze, targetX, targetY) {
+    if (this.aiType === 'random') {
       if (Math.random() > 0.8) {
         const directions = [[TILE_SIZE, 0], [-TILE_SIZE, 0], [0, TILE_SIZE], [0, -TILE_SIZE]];
         const dir = directions[Math.floor(Math.random() * directions.length)];
